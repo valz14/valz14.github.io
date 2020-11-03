@@ -25,6 +25,11 @@ $light-purple-color:  lighten($purple-color, 25%);
 $pink-color:          #f92080 !default;
 $pink-color-light:    #ffdddd !default;
 $yellow-color:        #efcc00 !default;
+$theme-color: #5887ff !default;
+// 222a68, #574ae2, 136f63, 3f88c5, 136f63, 
+// $theme-color: #80a4ed !default;
+$lighter-theme-color: lighten($theme-color, 20%);
+$darker-theme-color: darken($theme-color, 40%);
 
 $grey-color:          #828282 !default;
 $grey-color-light:    lighten($grey-color, 40%);

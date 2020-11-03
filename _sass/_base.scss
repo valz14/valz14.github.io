@@ -5,7 +5,8 @@
 // Typography
 
 a, table.table a {
-  color: var(--global-theme-color);
+  color: var(--link-theme-color);
+  text-decoration: underline;
   &:hover {
     color: var(--global-theme-color);
     text-decoration: underline;
@@ -91,6 +92,7 @@ a, table.table a {
     color: var(--global-text-color);
   }
   .navbar-nav .nav-item .nav-link {
+    text-decoration:none;
     &:hover {
       color: var(--global-hover-color);
     }
@@ -99,6 +101,7 @@ a, table.table a {
       background-color: inherit;
       font-weight: bolder;
       color: var(--global-theme-color);
+      text-decoration:none;
       &:hover {
         color: var(--global-hover-color);
       }
@@ -318,8 +321,9 @@ footer.sticky-bottom {
         abbr {
           display: inline-block;
           background-color: var(--global-theme-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
+          // padding-left: 1rem;
+          // padding-right: 1rem;
+          width:100%;
           a {
             color: white;
             &:hover {
@@ -356,7 +360,10 @@ footer.sticky-bottom {
           padding-right: 1rem;
           padding-top: 0.25rem;
           padding-bottom: 0.25rem;
-          &:hover {
+          margin-left:0;
+          margin-right: 0.65rem;
+      text-decoration:none;
+      &:hover {
             color: var(--global-theme-color);
             border-color: var(--global-theme-color);
           }

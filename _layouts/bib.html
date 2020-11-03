@@ -57,15 +57,15 @@
       {% elsif entry.type == "inproceedings" %}
         <em>In {{entry.booktitle}}</em>
       {% endif %}
-      {% if entry.year %}
-        {{entry.year}}
+      <!-- {% if entry.year %}
+        {{entry.year}} -->
       {% endif %}
       </div>
     {% endif %}
 
     <div class="links">
     {% if entry.abstract %}
-      <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+      <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
     {% endif %}
     {% if entry.arxiv %}
       <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button" target="_blank">arXiv</a>
@@ -91,7 +91,7 @@
       <a href="{{ entry.blog }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Blog</a>
     {% endif %}
     {% if entry.code %}
-      <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>
+      <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Code / Data</a>
     {% endif %}
     {% if entry.poster %}
       {% if entry.poster contains '://' %}
