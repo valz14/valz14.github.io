@@ -80,6 +80,7 @@ a, table.table a {
   border-bottom: 1px solid $grey-color-light;
   opacity: 0.95;
   background-color: var(--global-bg-color);
+  text-decoration: none;
 }
 .navbar.navbar-light {
   // Remove link decoration
@@ -89,7 +90,10 @@ a, table.table a {
     }
   }
   .navbar-brand {
-    color: var(--global-text-color);
+    text-decoration:none;
+    &:hover{
+      color:var(--global-theme-color);
+    }
   }
   .navbar-nav .nav-item .nav-link {
     text-decoration:none;
@@ -193,8 +197,10 @@ footer.fixed-bottom {
   }
   a {
     color: var(--global-footer-link-color);
+    text-decoration:none;
+    font-weight: bolder;
     &:hover {
-      color: pink;
+      color: var(--global-theme-color);
       text-decoration: none;
     }
   }
@@ -301,8 +307,8 @@ footer.sticky-bottom {
     }
   }
   h2.year {
-    color: $grey-color-light;
-    border-top: 1px solid $grey-color-light;
+    color: $grey-color;
+    border-top: 1px solid $grey-color;
     padding-top: 1rem;
     margin-top: 2rem;
     margin-bottom: -2rem;
@@ -338,6 +344,7 @@ footer.sticky-bottom {
       }
       .title {
         font-weight: bolder;
+        font-size: 1.1rem;
       }
       .author {
         a {
@@ -350,6 +357,7 @@ footer.sticky-bottom {
         > em {
           border-bottom: 1px solid;
           font-style: normal;
+          font-weight: bolder; 
         }
       }
       .links {
