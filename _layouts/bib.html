@@ -11,6 +11,11 @@
     {% endif %}
   {% endif %}
   </div>
+  <!-- <div class="col-sm-2 abbr">
+    {% if entry.forthcoming %}
+      <abbr class="badge" style="color:aliceblue">(Conditionally Accepted)</abbr>
+    {% endif %}
+    </div> -->
 
   <div id="{{entry.key}}" class="col-sm-8">
     {% if entry.type == "thesis" %}
@@ -52,10 +57,14 @@
       </div>
 
       <div class="periodical">
-      {% if entry.type == "article" %}
+        <!-- auto assume forthcoming = CHI (proceedings) -->
+      {% if entry.forthcoming %}
+        Conditionally Accepted to <em>{{entry.booktitle}}</em>
+      {% elsif entry.type == "article" %}
         <em>{{entry.journal}}</em>
       {% elsif entry.type == "inproceedings" %}
-        <em>In {{entry.booktitle}}</em>
+        <!-- <em>In {{entry.booktitle}}</em> -->
+        <em>{{entry.booktitle}}</em>
       {% endif %}
       <!-- {% if entry.year %}
         {{entry.year}} -->
@@ -110,6 +119,9 @@
     {% if entry.website %}
       <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Website</a>
     {% endif %}
+    {% if entry.forthcoming %}
+    <a class="btn btn-sm z-depth-0" role="button" target="_blank">PDF (Forthcoming)</a>
+  {% endif %}
     </div>
 
     <!-- Hidden abstract block -->
